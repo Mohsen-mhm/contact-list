@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap-css/bootstrap.min.css">
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="font/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="styles/css/main.css">
+    <title>Document</title>
+</head>
+<body dir="rtl">
+
+    <header class="container-fluid d-flex justify-content-start bg-light shadow p-3">
+        <h3 class="m-2">دفترچه تلفن</h3>
+    </header>
+    <main class="container-fluid">
+        <div class="row w-100">
+            <div class="col-9 d-flex justify-content-between align-items-center">
+                <h3>مخاطبین</h3>
+                <div class="border d-flex justify-content-evenly align-items-center w-100">
+                    <div class="d-flex justify-content-center align-items-center w-25">
+                        <label class="form-label w-50" for="sort-select">به ترتیب:</label>
+                        <select class="form-select w-50" name="sort-select" id="sort-select">
+                            <option value="name">نام</option>
+                            <option value="time">زمان</option>
+                            <option value="type">نوع</option>
+                        </select>
+                    </div>
+                    <p>تعداد مخاطبین: <b>5</b></p>
+                </div>
+            </div>
+            <div class="col-3 d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                    <i class="far fa-filter"></i>
+                    <p>فیلتر</p>
+                </div>
+                <button class="w-50 d-flex justify-content-around align-items-center btn btn-success text-white">افزودن مخاطب <i class="fas fa-plus"></i></button>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+    </main>
+
+    <script src="functions/bootstrap-js/bootstrap.bundle.min.js"></script>
+    <script src="functions/app.js"></script>
+</body>
+</html>

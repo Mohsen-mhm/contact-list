@@ -9,3 +9,48 @@
     box-sizing: border-box;
     font-family: 'Vazir';
 }
+
+.table-responsive-stack tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+}
+  
+  
+.table-responsive-stack td,
+.table-responsive-stack th {
+    display:block;
+    flex: 1 1 auto;
+}
+  
+.table-responsive-stack .table-responsive-stack-thead {
+    font-weight: bold;
+}
+  
+@media screen and (max-width: 768px) {
+    .responsive-header{
+        flex-direction: column;
+    }
+    .responsive-header-one.col-7{
+        width: 100%;
+    }
+    .responsive-header-two.col-4{
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .table-responsive-stack tr {
+        flex-direction: column;
+        border-bottom: 3px solid #ccc;
+        display:block;
+    }
+    .table-responsive-stack td {
+        float: left\9;
+        width:100%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .responsive-header-one{
+        padding: 0;
+    }
+}

@@ -12,37 +12,65 @@
 </head>
 <body dir="rtl">
 
-    <header class="container-fluid d-flex justify-content-start bg-light shadow p-3">
+    <header class="container-fluid d-flex justify-content-center bg-light shadow p-3">
         <h3 class="m-2">دفترچه تلفن</h3>
     </header>
     <main class="container-fluid">
-        <div class="row w-100">
-            <div class="col-9 d-flex justify-content-between align-items-center">
-                <h3>مخاطبین</h3>
-                <div class="border d-flex justify-content-evenly align-items-center w-100">
-                    <div class="d-flex justify-content-center align-items-center w-25">
-                        <label class="form-label w-50" for="sort-select">به ترتیب:</label>
-                        <select class="form-select w-50" name="sort-select" id="sort-select">
+        <h4 class="text-center mt-4">مخاطبین</h4>
+        <div class="row mt-3 d-flex justify-content-center align-items-center responsive-header">
+            <div class="col-7 d-flex justify-content-between align-items-center responsive-header-one">
+                <div class="row d-flex justify-content-evenly align-items-center w-100 p-3">
+                    <div class="col-sm-9 col-lg-10 col-xl-9 d-flex justify-content-center align-items-center w-50">
+                        <label class="form-label w-50 text-center" for="sort-select">به ترتیب:</label>
+                        <select class="form-select w-50 border-0" name="sort-select" id="sort-select">
                             <option value="name">نام</option>
                             <option value="time">زمان</option>
                             <option value="type">نوع</option>
                         </select>
                     </div>
-                    <p>تعداد مخاطبین: <b>5</b></p>
+                    <p class="col-sm-3 col-lg-2 col-xl-3 text-center mt-2 w-50">تعداد مخاطبین: <b>4</b></p>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-between align-items-center">
-                <div class="d-flex justify-content-center align-items-center">
-                    <i class="far fa-filter"></i>
-                    <p>فیلتر</p>
-                </div>
-                <button class="w-50 d-flex justify-content-around align-items-center btn btn-success text-white">افزودن مخاطب <i class="fas fa-plus"></i></button>
-                <i class="fas fa-ellipsis-h"></i>
+            <div class="col-4 d-flex justify-content-evenly align-items-center responsive-header-two">
+                <button class="d-flex justify-content-center align-items-center text-center rounded btn btn-light"> فیلتر<i class="far fa-filter me-2"></i></button>
+                <button class="d-flex align-items-center btn btn-success">افزودن مخاطب <i class="fas fa-plus me-2"></i></button>
             </div>
         </div>
+        <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
+            <thead class="thead-dark">
+                <tr>
+                    <th>نام</th>
+                    <th>شماره تلفن</th>
+                    <th>تلفن ثابت</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>محسن</td>
+                    <td>09175848714</td>
+                    <td>07138474664</td>
+                </tr>
+                <tr>
+                    <td>محسن</td>
+                    <td>09175848714</td>
+                    <td>07138474664</td>
+                </tr>
+                <tr>
+                    <td>محسن</td>
+                    <td>09175848714</td>
+                    <td>07138474664</td>
+                </tr>
+                <tr>
+                    <td>محسن</td>
+                    <td>09175848714</td>
+                    <td>07138474664</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <script src="functions/bootstrap-js/bootstrap.bundle.min.js"></script>
+    <script src="functions/jquery/jquery-3.6.0.min.js"></script>
     <script src="functions/app.js"></script>
 </body>
 </html>

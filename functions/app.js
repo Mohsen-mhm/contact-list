@@ -28,4 +28,7 @@ $(document).ready(function() {
     window.onresize = function(e) {
         flexTable();
     };
-}); 
+    $(".add-contact-btn").click(function(){
+        location.replace('../pages/add-contact/add-contact.html')
+    })
+});

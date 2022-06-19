@@ -28,7 +28,7 @@
     font-weight: bold;
 }
   
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 899px) {
     .table-responsive-stack tr {
         flex-direction: column;
         border-bottom: 3px solid #ccc;

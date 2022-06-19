@@ -28,7 +28,7 @@
                             <option value="type">Type</option>
                         </select>
                     </div>
-                    <p class="col-sm-3 col-lg-2 col-xl-3 text-center mt-2 w-50">Contacts Number: <b>4</b></p>
+                    <p class="col-sm-3 col-lg-2 col-xl-3 text-center mt-2 w-50">Contacts Number: <b class="contact-number"></b></p>
                 </div>
             </div>
             <div class="col-4 d-flex justify-content-evenly align-items-center responsive-header-two">
@@ -39,7 +39,7 @@
         <table class="table table-bordered table-striped table-responsive-stack" id="tableOne">
             <thead class="thead-dark">
                 <tr>
-                    <th class="d-flex align-items-center">Avatar</th>
+                    <th>Avatar</th>
                     <th>Name</th>
                     <th>Gender</th>
                     <th>Email</th>
@@ -47,53 +47,14 @@
                     <th>Options</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td class="d-flex align-items-center"><img src="img/avatar-man.png" alt="Profile" class="w-25 rounded-5 hero-avatar"></td>
-                    <td class="table-responsive">Mr.Mohsen Mohammadi</td>
-                    <td>male</td>
-                    <td class="table-responsive">example@gmail.com</td>
-                    <td>09175848714</td>
-                    <td>
-                        <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        <button class="btn btn-primary edit-contact-btn"><i class="fas fa-pencil"></i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="d-flex align-items-center"><img src="img/avatar-woman.png" alt="Profile" class="w-25 rounded-5 hero-avatar"></td>
-                    <td class="table-responsive">Ms.Nahid Razmjoee</td>
-                    <td>Female</td>
-                    <td class="table-responsive">info@gmail.com</td>
-                    <td>09375074371</td>
-                    <td>
-                        <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        <button class="btn btn-primary edit-contact-btn"><i class="fas fa-pencil"></i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="d-flex align-items-center"><img src="img/avatar-man.png" alt="Profile" class="w-25 rounded-5 hero-avatar"></td>
-                    <td class="table-responsive">Mr.Mohsen Mohammadi</td>
-                    <td>male</td>
-                    <td class="table-responsive">example@gmail.com</td>
-                    <td>09175848714</td>
-                    <td>
-                        <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        <button class="btn btn-primary edit-contact-btn"><i class="fas fa-pencil"></i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="d-flex align-items-center"><img src="img/avatar-woman.png" alt="Profile" class="w-25 rounded-5 hero-avatar"></td>
-                    <td class="table-responsive">Ms.Nahid Razmjoee</td>
-                    <td>Female</td>
-                    <td class="table-responsive">info@gmail.com</td>
-                    <td>09375074371</td>
-                    <td>
-                        <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                        <button class="btn btn-primary edit-contact-btn"><i class="fas fa-pencil"></i></button>
-                    </td>
-                </tr>
-            </tbody>
+            <tbody class="contact-list-body"></tbody>
         </table>
+        <nav class="d-flex justify-content-center align-content-center">
+            <ul class="pagination pagination-sm">
+              <li class="page-item page-one active"><a class="page-link" href="">1</a></li>
+              <li class="page-item page-two"><a class="page-link" href="">2</a></li>
+            </ul>
+        </nav>
     </main>
 
     <script src="vendor/bootstrap/bootstrap-js/bootstrap.bundle.min.js"></script>

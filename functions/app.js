@@ -31,4 +31,7 @@ $(document).ready(function() {
     $(".add-contact-btn").click(function(){
         location.replace('../pages/add-contact/add-contact.html')
     })
+    $(".edit-contact-btn").click(function(){
+        location.replace('../pages/edit-contact/edit-contact.html')
+    })
 });

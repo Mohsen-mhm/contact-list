@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../font/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../font/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="./styles/add-contact.css">
-    <title>Document</title>
+    <title>Add Contact</title>
 </head>
 <body>
     <header class="container-fluid d-flex justify-content-center bg-light shadow p-3">
@@ -18,22 +18,9 @@
         <form>
             <div class="row">
                 <div class="col-md-12">
-                    <label for="first">Avatar image</label>
-                    <input type="file" class="form-control">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
                     <div class="form-group mt-3">
-                        <label for="first">First Name</label>
-                        <input type="text" class="form-control" placeholder="Mohsen" id="first">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group mt-3">
-                        <label for="last">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Mohammadi" id="last">
+                        <label for="avatar">Avatar image</label>
+                        <input type="file" class="form-control" id="avatar">
                     </div>
                 </div>
             </div>
@@ -41,14 +28,29 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group mt-3">
-                        <label for="company">Email address</label>
-                        <input type="email" class="form-control" placeholder="example@gmail.com" id="company">
+                        <label for="first-name">First Name</label>
+                        <input type="text" class="form-control" placeholder="Mohsen" id="first-name">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group mt-3">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="+989123456789">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Mohammadi" id="last-name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group mt-3">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" placeholder="example@gmail.com" id="email">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mt-3">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone-number" placeholder="+989123456789">
                     </div>
                 </div>
             </div>

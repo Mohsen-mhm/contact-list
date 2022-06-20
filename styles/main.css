@@ -44,7 +44,7 @@
 }
 
 @media screen and (max-width: 768px) {
-.responsive-header{
+    .responsive-header{
         flex-direction: column;
     }
     .responsive-header-one.col-7{

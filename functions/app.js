@@ -8,18 +8,41 @@ $(document).ready(function () {
         e.preventDefault()
         pageOne.addClass('active')
         pageTwo.removeClass('active')
-        getData(1)
         contactListBody.empty()
+        getData(1)
     })
     pageTwo.click(function (e) {
         e.preventDefault()
         pageTwo.addClass('active')
         pageOne.removeClass('active')
-        getData(2)
         contactListBody.empty()
+        getData(2)
     })
-    
-    function getData(num){
+
+    function createTable(e) {
+        let trElem = $('<tr></tr>')
+        let contactImg = $('<td class="d-flex align-items-center table-responsive" style="flex-basis: 16.6667%;"><img src="' + e.picture.large + '" alt="Profile" class="w-25 rounded-5 hero-avatar"></td>')
+        let contactName = $('<td class="table-responsive" style="flex-basis: 16.6667%;">' + e.name.title + '. ' + e.name.first + ' ' + e.name.last + '</td>')
+        let contactGender = $('<td class="table-responsive" style="flex-basis: 16.6667%;">' + e.gender + '</td>')
+        let contactEmail = $('<td class="table-responsive" style="flex-basis: 16.6667%;">' + e.email + '</td>')
+        let contactPhone = $('<td class="table-responsive" style="flex-basis: 16.6667%;">' + e.phone + '</td>')
+        let contactOptions = $('<td class="table-responsive options-btn" style="flex-basis: 16.6667%;"></td>')
+        let deleteBtn = $('<button class="btn btn-danger me-2" style="flex-basis: 16.6667%;"><i class="fas fa-trash"></i></button>')
+        let editBtn = $('<button class="btn btn-primary edit-contact-btn"><i class="fas fa-pencil"></i></button>')
+
+        contactOptions.append(deleteBtn,editBtn)
+        trElem.append(contactImg, contactName, contactGender, contactEmail, contactPhone, contactOptions)
+        contactListBody.append(trElem)
+        
+        editBtn.click(function () {
+            location.replace('../pages/edit-contact/edit-contact.html')
+        })
+        deleteBtn.click(function () {
+            location.replace('../pages/add-contact/add-contact.html')
+        })
+    }
+
+    function getData(num) {
         $.ajax({
             url: 'https://randomuser.me/api?page=' + num + '&results=10&seed=erfan',
             dataType: 'json',
@@ -27,28 +50,11 @@ $(document).ready(function () {
                 const incomingData = data.results
                 $('.contact-number').text(incomingData.length)
                 incomingData.forEach(e => {
-                    const trElem = $('<tr></tr>')
-                    const contactImg = $('<td class="d-flex align-items-center table-responsive" style="flex-basis: 16.6667%;"><img src="' + e.picture.large + '" alt="Profile" class="w-25 rounded-5 hero-avatar"></td>')
-                    const contactName = $('<td class="table-responsive" style="flex-basis: 16.6667%;">' + e.name.title + '. ' + e.name.first + ' ' + e.name.last + '</td>')
-                    const contactGender = $('<td class="table-responsive" style="flex-basis: 16.6667%;">' + e.gender + '</td>')
-                    const contactEmail = $('<td class="table-responsive" style="flex-basis: 16.6667%;">' + e.email + '</td>')
-                    const contactPhone = $('<td class="table-responsive" style="flex-basis: 16.6667%;">' + e.phone + '</td>')
-                    const contactOptions = $('<td class="table-responsive" style="flex-basis: 16.6667%;"><button class="btn btn-danger me-2" style="flex-basis: 16.6667%;"><i class="fas fa-trash"></i></button><button class="btn btn-primary" id="edit-contact-btn"><i class="fas fa-pencil"></i></button></td>')
-    
-                    trElem.append(contactImg, contactName, contactGender, contactEmail, contactPhone, contactOptions)
-                    contactListBody.append(trElem)
+                    createTable(e)
                 })
             }
         })
     }
-
-    $(".add-contact-btn").click(function () {
-        location.replace('../pages/add-contact/add-contact.html')
-    })
-    $("#edit-contact-btn").click(function () {
-        location.replace('../pages/edit-contact/edit-contact.html')
-    })
-
     $('.table-responsive-stack').each(function (i) {
         const id = $(this).attr('id')
         $(this).find("th").each(function (i) {

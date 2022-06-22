@@ -41,16 +41,13 @@
     .hero-avatar{
         width: 50px !important;
     }
-}
-
-@media screen and (max-width: 768px) {
     .responsive-header{
         flex-direction: column;
     }
     .responsive-header-one.col-7{
         width: 100%;
     }
-    .responsive-header-two.col-4{
+    .responsive-header-two.col-5{
         width: 100%;
         margin-bottom: 1.5rem;
     }

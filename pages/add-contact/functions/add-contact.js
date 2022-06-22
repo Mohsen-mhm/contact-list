@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $('#add-contact-form').submit(function (e) {
+    $('#add-contact-form').submit(function (e) {   //Send add contact request
         e.preventDefault()
 
         let firstName = $('#first-name').val()
@@ -33,7 +33,7 @@ $(document).ready(function () {
             "data": form
         };
         $.ajax(settings).done(function (response) {
-            console.log(response);
+            console.log($.parseJSON(response));
         });
     })
 })

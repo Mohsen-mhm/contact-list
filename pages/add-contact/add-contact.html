@@ -15,7 +15,7 @@
         <h3 class="m-2">Add Contact</h3>
     </header>
     <div class="container mt-5">
-        <form>
+        <form id="add-contact-form">
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group mt-3">
@@ -50,20 +50,20 @@
                 <div class="col-md-6">
                     <div class="form-group mt-3">
                         <label for="phone-number">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone-number" placeholder="+989123456789">
+                        <input type="tel" class="form-control" placeholder="+989123456789" id="phone-number">
                     </div>
                 </div>
             </div>
           
-            <label for="contact-preference" class="mt-3">What is his/her gender?</label>
+            <label for="contact-gender" class="mt-3">What is his/her gender?</label>
             <div class="radio">
                 <label>
-                    <input type="radio" name="contact-preference" id="contact-preference" value="am" checked> Male
+                    <input type="radio" name="contact-gender" id="contact-gender" value="male" checked> Male
                 </label>
             </div>
             <div class="radio">
                 <label>
-                    <input type="radio" name="contact-preference" id="contact-preference" value="pm" checked> Female
+                    <input type="radio" name="contact-gender" id="contact-gender" value="female"> Female
                 </label>
             </div>
 
@@ -72,5 +72,7 @@
       </div>
     
     <script src="../../vendor/bootstrap/bootstrap-js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/jquery/jquery-3.6.0.min.js"></script>
+    <script src="functions/add-contact.js"></script>
 </body>
 </html>

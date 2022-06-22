@@ -30,15 +30,26 @@ $(document).ready(function () {
         let deleteBtn = $('<button class="btn btn-danger me-2" style="flex-basis: 16.6667%;"><i class="fas fa-trash"></i></button>')
         let editBtn = $('<button class="btn btn-primary edit-contact-btn"><i class="fas fa-pencil"></i></button>')
 
-        contactOptions.append(deleteBtn,editBtn)
+        contactOptions.append(deleteBtn, editBtn)
         trElem.append(contactImg, contactName, contactGender, contactEmail, contactPhone, contactOptions)
         contactListBody.append(trElem)
-        
+
         editBtn.click(function () {
             location.replace('../pages/edit-contact/edit-contact.html')
         })
-        deleteBtn.click(function () {
+        $('.add-contact-btn').click(function () {
             location.replace('../pages/add-contact/add-contact.html')
+        })
+        deleteBtn.click(function () {
+            var settings = {
+                "url": "https://webhook.site/d85b22f8-f835-410f-832f-97c099dd016b?id=10",
+                "method": "DELETE",
+                "timeout": 0,
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
         })
     }
 
@@ -55,6 +66,7 @@ $(document).ready(function () {
             }
         })
     }
+
     $('.table-responsive-stack').each(function (i) {
         const id = $(this).attr('id')
         $(this).find("th").each(function (i) {
